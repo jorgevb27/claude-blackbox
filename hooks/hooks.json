@@ -1,0 +1,11 @@
+{
+  "description": "claude-blackbox: flight recorder for Claude Code sessions",
+  "hooks": {
+    "SessionStart":     [{ "hooks": [{ "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/skills/claude-blackbox/hooks/run.sh\" hook", "timeout": 10 }] }],
+    "UserPromptSubmit": [{ "hooks": [{ "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/skills/claude-blackbox/hooks/run.sh\" hook", "timeout": 10 }] }],
+    "PreToolUse":       [{ "matcher": "Bash", "hooks": [{ "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/skills/claude-blackbox/hooks/run.sh\" hook", "timeout": 10 }] }],
+    "PostToolUse":      [{ "matcher": "*", "hooks": [{ "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/skills/claude-blackbox/hooks/run.sh\" hook", "timeout": 10 }] }],
+    "PreCompact":       [{ "hooks": [{ "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/skills/claude-blackbox/hooks/run.sh\" hook", "timeout": 10 }] }],
+    "Stop":             [{ "hooks": [{ "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/skills/claude-blackbox/hooks/run.sh\" hook", "timeout": 10 }] }]
+  }
+}

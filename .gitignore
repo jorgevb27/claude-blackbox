@@ -1,0 +1,5 @@
+.blackbox/
+__pycache__/
+*.pyc
+dist/
+.DS_Store
