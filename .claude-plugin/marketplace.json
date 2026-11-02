@@ -1,0 +1,12 @@
+{
+  "name": "claude-blackbox",
+  "owner": { "name": "__USER__" },
+  "plugins": [
+    {
+      "name": "claude-blackbox",
+      "source": "./",
+      "description": "Flight recorder for Claude Code: session history + crash-proof checkpoints + auto-resume.",
+      "version": "1.0.0"
+    }
+  ]
+}
