@@ -1,6 +1,6 @@
 {
   "name": "claude-blackbox",
-  "owner": { "name": "__USER__" },
+  "owner": { "name": "jorgevb27" },
   "plugins": [
     {
       "name": "claude-blackbox",

@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/__USER__/claude-blackbox/stargazers"><img src="https://img.shields.io/github/stars/__USER__/claude-blackbox?style=flat&color=ff8a3d" alt="Stars"></a>
-  <a href="https://github.com/__USER__/claude-blackbox/releases"><img src="https://img.shields.io/github/v/release/__USER__/claude-blackbox?color=ff8a3d" alt="Release"></a>
+  <a href="https://github.com/jorgevb27/claude-blackbox/stargazers"><img src="https://img.shields.io/github/stars/jorgevb27/claude-blackbox?style=flat&color=ff8a3d" alt="Stars"></a>
+  <a href="https://github.com/jorgevb27/claude-blackbox/releases"><img src="https://img.shields.io/github/v/release/jorgevb27/claude-blackbox?color=ff8a3d" alt="Release"></a>
   <img src="https://img.shields.io/badge/Claude_Code-plugin_%2B_skill-ff8a3d" alt="Claude Code plugin + skill">
   <img src="https://img.shields.io/badge/dependencias-0-3fb950" alt="Cero dependencias">
   <img src="https://img.shields.io/badge/python-3.8%2B-79c0ff" alt="Python 3.8+">
@@ -45,7 +45,7 @@ interrumpió y cuál es el siguiente paso.
 Dentro de Claude Code:
 
 ```
-/plugin marketplace add __USER__/claude-blackbox
+/plugin marketplace add jorgevb27/claude-blackbox
 /plugin install claude-blackbox@claude-blackbox
 ```
 
@@ -57,7 +57,7 @@ Reiniciá Claude Code y listo: los hooks quedan activos y la skill cargada.
 <summary><b>macOS / Linux</b></summary>
 
 ```bash
-git clone --depth 1 https://github.com/__USER__/claude-blackbox /tmp/claude-blackbox
+git clone --depth 1 https://github.com/jorgevb27/claude-blackbox /tmp/claude-blackbox
 mkdir -p .claude/skills && cp -r /tmp/claude-blackbox/skills/claude-blackbox .claude/skills/
 python3 .claude/skills/claude-blackbox/scripts/blackbox.py install-hooks
 ```
@@ -67,7 +67,7 @@ python3 .claude/skills/claude-blackbox/scripts/blackbox.py install-hooks
 <summary><b>Windows (PowerShell)</b></summary>
 
 ```powershell
-git clone --depth 1 https://github.com/__USER__/claude-blackbox $env:TEMP\claude-blackbox
+git clone --depth 1 https://github.com/jorgevb27/claude-blackbox $env:TEMP\claude-blackbox
 New-Item -ItemType Directory -Force .claude\skills | Out-Null
 Copy-Item -Recurse $env:TEMP\claude-blackbox\skills\claude-blackbox .claude\skills\
 python .claude\skills\claude-blackbox\scripts\blackbox.py install-hooks
@@ -79,7 +79,7 @@ y suma `.blackbox/` al `.gitignore`. Con `--global` graba todos tus proyectos de
 
 ### Opción C: Claude.ai (web / escritorio)
 
-Descargá `claude-blackbox-skill.zip` de la [última release](https://github.com/__USER__/claude-blackbox/releases/latest)
+Descargá `claude-blackbox-skill.zip` de la [última release](https://github.com/jorgevb27/claude-blackbox/releases/latest)
 → **Configuración → Capacidades → Skills → Subir skill**. (Los hooks son de Claude Code; en Claude.ai tenés el flujo de checkpoints.)
 
 ## 🕹️ Uso

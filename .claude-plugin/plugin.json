@@ -2,9 +2,9 @@
   "name": "claude-blackbox",
   "version": "1.0.0",
   "description": "Flight recorder for Claude Code: records every prompt, command, file change and decision, and resumes exactly where you left off after a crash, power cut or compaction.",
-  "author": { "name": "__USER__", "url": "https://github.com/__USER__" },
-  "homepage": "https://github.com/__USER__/claude-blackbox",
-  "repository": "https://github.com/__USER__/claude-blackbox",
+  "author": { "name": "jorgevb27", "url": "https://github.com/jorgevb27" },
+  "homepage": "https://github.com/jorgevb27/claude-blackbox",
+  "repository": "https://github.com/jorgevb27/claude-blackbox",
   "license": "MIT",
   "keywords": ["claude-code", "skill", "hooks", "checkpoint", "resume", "history", "crash-recovery", "audit-log"]
 }
