@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-label="Without claude-blackbox Claude starts from zero after a crash; with it, Claude resumes with task, next step, changed files and a warning about the interrupted command">
+  <defs>
+    <style>
+      .h{font:800 26px ui-sans-serif,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;fill:#f0f6fc}
+      .k{font:700 13px ui-monospace,Consolas,Menlo,monospace;letter-spacing:2px}
+      .t{font:500 14.5px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;fill:#c9d1d9;white-space:pre}
+      .s{font:500 14px ui-sans-serif,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;fill:#8b949e}
+    </style>
+  </defs>
+  <rect width="1200" height="470" rx="18" fill="#0d1117"/>
+  <text x="40" y="52" class="h">The same power cut, <tspan fill="#ff8a3d">two very different mornings</tspan></text>
+
+  <!-- without -->
+  <rect x="40" y="80" width="545" height="350" rx="16" fill="#161b22" stroke="#f85149" stroke-opacity=".6" stroke-width="2"/>
+  <text x="64" y="114" class="k" fill="#ff7b72">✖ WITHOUT BLACKBOX</text>
+  <text x="64" y="156" class="t"><tspan fill="#8b949e">❯</tspan> continue where we left off</text>
+  <text x="64" y="194" class="t" fill="#8b949e">I don't have context from a previous</text>
+  <text x="64" y="216" class="t" fill="#8b949e">session. What were we working on?</text>
+  <g class="s">
+    <text x="64" y="268">😩 You re-explain the task from memory</text>
+    <text x="64" y="298">❓ Which files were half-edited?</text>
+    <text x="64" y="328">💥 Did the migration finish? Nobody knows,</text>
+    <text x="92" y="350">so it gets run twice</text>
+    <text x="64" y="380">🔑 The API key you pasted is in plain text somewhere</text>
+  </g>
+
+  <!-- with -->
+  <rect x="615" y="80" width="545" height="350" rx="16" fill="#161b22" stroke="#3fb950" stroke-opacity=".7" stroke-width="2"/>
+  <text x="639" y="114" class="k" fill="#56d364">✔ WITH BLACKBOX</text>
+  <text x="639" y="156" class="t"><tspan fill="#ff8a3d" font-weight="700">[claude-blackbox]</tspan> Recovered state:</text>
+  <text x="639" y="182" class="t"><tspan fill="#8b949e">task      </tspan>Stripe checkout on cart page</text>
+  <text x="639" y="206" class="t"><tspan fill="#8b949e">next step </tspan><tspan fill="#79c0ff">Handle webhook</tspan></text>
+  <text x="639" y="230" class="t"><tspan fill="#8b949e">files     </tspan>stripe_client.py, cart.py,</text>
+  <text x="639" y="252" class="t">          webhooks.py</text>
+  <text x="639" y="278" class="t" fill="#d29922" font-weight="700">⚠ alembic upgrade head never finished</text>
+  <text x="639" y="302" class="t"><tspan fill="#8b949e">prompt    </tspan>my key is <tspan fill="#d29922" font-weight="700">[REDACTED]</tspan></text>
+  <g class="s">
+    <text x="639" y="346">⚡ Claude checks the migration first,</text>
+    <text x="667" y="368">then continues from the next step</text>
+    <text x="639" y="398">⏱ Back to work in seconds, not minutes</text>
+  </g>
+</svg>

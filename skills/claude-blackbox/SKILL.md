@@ -10,7 +10,7 @@ Turns the project into a **recoverable and auditable** workspace with two layers
 1. **Recovery state** — `.blackbox/checkpoints/state.json`: where the work stopped and the next step.
 2. **Full history** — `.blackbox/history/`: chronological record of Claude's activity.
 
-All data stays local in `.blackbox/` (git-ignored by the installer). Never store secrets,
+All data stays local in `.blackbox/`, which ignores itself in git (it contains its own `.gitignore`). Never store secrets,
 passwords, API keys, tokens or private keys; the recorder redacts common secret patterns automatically.
 
 The CLI lives next to this file: `scripts/blackbox.py` (Python 3.8+, no dependencies).

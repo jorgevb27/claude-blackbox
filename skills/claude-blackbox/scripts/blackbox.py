@@ -24,7 +24,7 @@ import uuid
 from datetime import datetime
 from pathlib import Path
 
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 DATA_DIR = ".blackbox"
 MAX_FILES = 200
 MAX_SNAPSHOTS = 50
@@ -56,6 +56,9 @@ class P:
     def ensure(self):
         for d in (self.history, self.state.parent, self.snapshots):
             d.mkdir(parents=True, exist_ok=True)
+        gi = self.base / ".gitignore"
+        if not gi.exists():  # self-ignoring folder: history never gets committed, in any install mode
+            gi.write_text("# created by claude-blackbox: keep this history out of git\n*\n", encoding="utf-8")
 
 
 # --------------------------------------------------------------------------- #
@@ -68,7 +71,10 @@ def now():
 
 SECRET_PATTERNS = [
     (re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----.*?-----END [A-Z ]*PRIVATE KEY-----", re.S), "[REDACTED_PRIVATE_KEY]"),
-    (re.compile(r"\b(sk-[A-Za-z0-9_\-]{16,})"), "[REDACTED]"),
+    (re.compile(r"\b(sk-[A-Za-z0-9_\-]{16,})"), "[REDACTED]"),  # OpenAI / Anthropic style
+    (re.compile(r"\b((?:sk|rk|pk)_(?:live|test)_[A-Za-z0-9]{10,}|whsec_[A-Za-z0-9]{10,})"), "[REDACTED]"),  # Stripe
+    (re.compile(r"\b(AIza[0-9A-Za-z_\-]{30,})"), "[REDACTED]"),  # Google API key
+    (re.compile(r"\beyJ[A-Za-z0-9_\-]{10,}\.[A-Za-z0-9_\-]{10,}\.[A-Za-z0-9_\-]{5,}"), "[REDACTED_JWT]"),
     (re.compile(r"\b(gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,})"), "[REDACTED]"),
     (re.compile(r"\b(AKIA[0-9A-Z]{16})\b"), "[REDACTED]"),
     (re.compile(r"\b(xox[abprs]-[A-Za-z0-9\-]{10,})"), "[REDACTED]"),

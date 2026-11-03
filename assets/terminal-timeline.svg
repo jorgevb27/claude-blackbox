@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="444" viewBox="0 0 1000 444" role="img" aria-label="blackbox.py timeline · real output">
+<style>.t{font:500 14.5px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre}</style>
+<rect width="1000" height="444" rx="14" fill="#0d1117"/>
+<rect width="1000" height="40" rx="14" fill="#161b22"/><rect y="26" width="1000" height="14" fill="#161b22"/>
+<circle cx="24" cy="20" r="7" fill="#ff5f56"/><circle cx="46" cy="20" r="7" fill="#ffbd2e"/><circle cx="68" cy="20" r="7" fill="#27c93f"/>
+<text x="500" y="25" text-anchor="middle" class="t" style="font-size:12.5px;fill:#8b949e">blackbox.py timeline · real output</text>
+<text x="24" y="70" class="t"><tspan fill="#3fb950" font-weight="700">$ </tspan><tspan fill="#c9d1d9">python blackbox.py timeline</tspan></text>
+<text x="24" y="92" class="t"></text>
+<text x="24" y="114" class="t"><tspan fill="#f0f6fc" font-weight="700">📅 2026-11-03</tspan></text>
+<text x="24" y="136" class="t"><tspan fill="#c9d1d9">  </tspan><tspan fill="#79c0ff" font-weight="700">└─ session 7f3a9c21</tspan></text>
+<text x="24" y="158" class="t"><tspan fill="#c9d1d9">      </tspan><tspan fill="#8b949e">12:49:17</tspan><tspan fill="#c9d1d9">  </tspan><tspan fill="#79c0ff">SessionStart</tspan><tspan fill="#c9d1d9">      startup</tspan></text>
+<text x="24" y="180" class="t"><tspan fill="#c9d1d9">      </tspan><tspan fill="#8b949e">12:49:18</tspan><tspan fill="#c9d1d9">  </tspan><tspan fill="#79c0ff">UserPromptSubmit</tspan><tspan fill="#c9d1d9">  Add Stripe checkout to the cart page. My test key is </tspan><tspan fill="#d29922" font-weight="700">[REDACTED]</tspan></text>
+<text x="24" y="202" class="t"><tspan fill="#c9d1d9">      </tspan><tspan fill="#8b949e">12:49:18</tspan><tspan fill="#c9d1d9">  </tspan><tspan fill="#79c0ff">PostToolUse</tspan><tspan fill="#c9d1d9">       Read src/cart.py</tspan></text>
+<text x="24" y="224" class="t"><tspan fill="#c9d1d9">      </tspan><tspan fill="#8b949e">12:49:19</tspan><tspan fill="#c9d1d9">  </tspan><tspan fill="#79c0ff">PostToolUse</tspan><tspan fill="#c9d1d9">       Write src/payments/stripe_client.py</tspan></text>
+<text x="24" y="246" class="t"><tspan fill="#c9d1d9">      </tspan><tspan fill="#8b949e">12:49:19</tspan><tspan fill="#c9d1d9">  </tspan><tspan fill="#79c0ff">PostToolUse</tspan><tspan fill="#c9d1d9">       Edit src/cart.py</tspan></text>
+<text x="24" y="268" class="t"><tspan fill="#c9d1d9">      </tspan><tspan fill="#8b949e">12:49:19</tspan><tspan fill="#c9d1d9">  </tspan><tspan fill="#79c0ff">PreToolUse</tspan><tspan fill="#c9d1d9">        Bash pytest tests/test_cart.py</tspan></text>
+<text x="24" y="290" class="t"><tspan fill="#c9d1d9">      </tspan><tspan fill="#8b949e">12:49:20</tspan><tspan fill="#c9d1d9">  </tspan><tspan fill="#79c0ff">PostToolUse</tspan><tspan fill="#c9d1d9">       Bash pytest tests/test_cart.py</tspan></text>
+<text x="24" y="312" class="t"><tspan fill="#c9d1d9">      </tspan><tspan fill="#8b949e">12:49:20</tspan><tspan fill="#c9d1d9">  </tspan><tspan fill="#79c0ff">checkpoint</tspan><tspan fill="#c9d1d9">        Handle webhook: payment_intent.succeeded</tspan></text>
+<text x="24" y="334" class="t"><tspan fill="#c9d1d9">      </tspan><tspan fill="#8b949e">12:49:21</tspan><tspan fill="#c9d1d9">  </tspan><tspan fill="#79c0ff">PostToolUse</tspan><tspan fill="#c9d1d9">       Write src/payments/webhooks.py</tspan></text>
+<text x="24" y="356" class="t"><tspan fill="#c9d1d9">      </tspan><tspan fill="#8b949e">12:49:21</tspan><tspan fill="#c9d1d9">  </tspan><tspan fill="#79c0ff">PreToolUse</tspan><tspan fill="#c9d1d9">        Bash alembic upgrade head</tspan></text>
+<text x="24" y="378" class="t"><tspan fill="#c9d1d9">  </tspan><tspan fill="#79c0ff" font-weight="700">└─ session c41d08e2</tspan></text>
+<text x="24" y="400" class="t"><tspan fill="#c9d1d9">      </tspan><tspan fill="#8b949e">12:49:22</tspan><tspan fill="#c9d1d9">  </tspan><tspan fill="#79c0ff">SessionStart</tspan><tspan fill="#c9d1d9">      startup</tspan></text>
+</svg>
